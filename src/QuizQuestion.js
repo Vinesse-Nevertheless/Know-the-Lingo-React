@@ -1,5 +1,6 @@
 //child component to Quiz.js and QuizQuestionButton
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import QuizScore from "./QuizScore.js";
 import QuizQuestionButton from "./QuizQuestionButton.js";
 
 /*
@@ -19,20 +20,18 @@ class QuizQuestion extends Component {
     super(props);
     this.state = {
       incorrectAnswer: false,
+      score:0,
+      rightTheFirstTime: true
     };
   }
   render() {
-    {
-      /* RETURN REQUIRED */
-    }
     return (
-      <>
+        <>
       <header>
           <h3>Know the Lingo</h3>
       </header>
       <main className="app">
         {" "}
-       
         {this.state.incorrectAnswer ? (
           <p className="error"> Sorry that's not right </p>
         ) : null}
@@ -62,15 +61,28 @@ class QuizQuestion extends Component {
             {/* React NEEDS a key attribute so that it knows which item is which. */}
           </ul>
         </section>
+        <section>
+          <QuizScore parentState = {this.state} />
+        </section>
+       {/* <section>
+          Current score: {this.state.score}
+       </section> */}
       </main>
       </>
-    );
-  }
+      )}
+   ;
+  
   handleClick(buttonText) {
+    var incrementor = this.state.score + 1
     if (buttonText == this.props.quiz_question.answer) {
       this.setState({ incorrectAnswer: false });
+      if(this.state.rightTheFirstTime){
+         this.setState({score : incrementor}) 
+      }
+      this.setState({rightTheFirstTime: true});
       this.props.showNextQuestionHandler();
     } else {
+      this.setState({rightTheFirstTime: false});
       this.setState({ incorrectAnswer: true });
     }
   }

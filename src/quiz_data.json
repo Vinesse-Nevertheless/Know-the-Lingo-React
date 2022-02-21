@@ -22,59 +22,6 @@
       "instruction_text": "In Japan it's customary to welcome a loved one home after a long day with 'Okaeri!' But this is the romanized spelling. What is welcome home in Japanese Kanji?",
       "answer_options": ["おかえり", "환영하다", "வரவேற்பு", "ຍິນດີຕ້ອນຮັບ"],
       "answer": "おかえり"
-    },
-    {
-      "id": 4,
-      "instruction_text": "Can you spot the fake language?",
-      "answer_options": ["Ge'ez", "Buhid", "Nadsat", "Nyanja"],
-      "answer": "Nadsat"
-    },
-    {
-      "id": 5,
-      "instruction_text": "'Máthe ton eaftó sou' is a famous quote from Socrates.  It means 'Know thyself.' Find the Greek translation.",
-      "answer_options": [
-        "דע את עצמך",
-        "Μάθε τον εαυτό σου",
-        "קענסט דיך",
-        "ନିଜକୁ ଜାଣ"
-      ],
-      "answer": "Μάθε τον εαυτό σου"
-    },
-    {
-      "id": 6,
-      "instruction_text": "When we think of the writing of ancient Egypt, we think of hieroglyphics, but what is the name of the script that everyday ancient Egyptians used that is found on the Rosetta Stone?",
-      "answer_options": ["Coptic", "Cuneiform", "Hieratic", "Demotic"],
-      "answer": "Demotic"
-    },
-    {
-      "id": 7,
-      "instruction_text": "नमस्ते (Greetings to you). This script is called Devanagari. Which two languages share this script?",
-      "answer_options": [
-        "Sanskrit and Arabic",
-        "Hindi and Nepali",
-        "Hebrew and Yiddish",
-        "Mongolian and Russian"
-      ],
-      "answer": "Hindi and Nepali"
-    },
-
-    {
-      "id": 8,
-      "instruction_text": "If the feeling of jealousy were a taste, it would be sour. In Chinese a synonmym for jealousy is chīcù which literally means to eat vinegar.  Can you pick out the the Chinese characters?",
-      "answer_options": ["பொறாமை", "질투하는", "ອິດສາ", "吃醋"],
-      "answer": "吃醋"
-    },
-    {
-      "id": 9,
-      "instruction_text": "How do you write 'thunderstorm' in Cherokee?",
-      "answer_options": ["ᎠᏴᏓᏆᎶᏍᎩ", "Naxkohoman", "ᐃᓄᒃᑎᑐᑦ", "The Cherokee have no written language"],
-      "answer": "ᎠᏴᏓᏆᎶᏍᎩ"
-    },
-    {
-      "id": 10,
-      "instruction_text": "How many languages make use of the Cyrillic alphabet?",
-      "answer_options": ["20", "50", "55", "62"],
-      "answer": "50"
     }
   ]
 }
