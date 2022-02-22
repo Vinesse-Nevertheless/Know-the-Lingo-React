@@ -45,6 +45,11 @@ body {
   padding: 15px;
 }
 
+.scoreboard{
+  font-size: auto;
+  padding: 15px;
+}
+
   /* ANSWERS/RIGHT SECTION */
   .answer-section {
     width: 100%;

@@ -10,16 +10,15 @@ class QuizEnd extends Component {
     const score = this.props.finalScore.score
     return (
       <>
-      <div className="score-text">
-        <div className="score">Thanks for playing!
-        
-          <p>Your final score is {score}   out of {quizData.quiz_questions.length}</p>
+        <div className="scoreboard">
+          <div >Thanks for playing!
+            <p>Your final score is {score}/{quizData.quiz_questions.length}.</p>
+          </div>
+          <a onClick={this.handleResetClick.bind(this)} href="">
+            Play Again?
+          </a>
         </div>
-        <a onClick={this.handleResetClick.bind(this)} href="">
-          Reset Quiz
-        </a>
-      </div>
-      </> 
+      </>
     );
   }
   handleResetClick() {
