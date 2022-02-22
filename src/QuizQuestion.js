@@ -33,9 +33,9 @@ class QuizQuestion extends Component {
   render() {
     return (
       <>
-         <div className="head">
+         <header className="head">
           <h3>Know the Lingo</h3>
-      </div>
+      </header>
      
       <>
       <main className="app">
