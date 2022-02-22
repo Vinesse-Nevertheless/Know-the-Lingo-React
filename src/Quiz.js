@@ -7,24 +7,13 @@ import QuizEnd from "./QuizEnd.js";
 //Get quiz question number, question text, answer options and correct answer from json file
 let quizData = require("./quiz_data.json");
 
-/*
-Button Flow 3
-showQuestionHandler prop is in <QuizQuestion> component.
-Before that code is run, an evaluation takes place to see if this is the last question in the quiz.
-If it is the last question go to QuizEnd.js
 
-If it's NOT the last question then showQuestionHandler prop is reached.
-showQuestionHandler prop is bound to showQuestion()
-
-showQuestion() changes the state of of the quiz question number--go from the current question to the next question
-*/
-
-//make data available in state for render
 class Quiz extends Component {
   constructor(props) {
     super(props);
     this.state = {
       quiz_position: 1,
+      lastQuestion: false
     };
   }
 
@@ -36,7 +25,7 @@ class Quiz extends Component {
     return (
       <div className="QuizQuestion">
         {isQuizEnd ? (
-          <QuizEnd resetClickHandler={this.handleResetClick.bind(this)} />
+           <QuizEnd resetClickHandler={this.handleResetClick.bind(this)} />
         ) : (
           <QuizQuestion
             quiz_question={
@@ -49,7 +38,9 @@ class Quiz extends Component {
     );
   }
   showNextQuestion() {
+    if (this.state.quiz_position < quizData.quiz_questions.length){
     this.setState({ quiz_position: this.state.quiz_position + 1 });
+    }
   }
   handleResetClick() {
     this.setState({ quiz_position: 1 });

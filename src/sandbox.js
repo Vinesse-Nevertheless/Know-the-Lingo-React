@@ -3,7 +3,6 @@ import React, { Component, useState } from "react";
 import QuizScore from "./QuizScore.js";
 import QuizEnd from "./QuizEnd.js";
 import QuizQuestionButton from "./QuizQuestionButton.js";
-import Quiz from "./Quiz"
 
 /*
 Button Flow 2
@@ -24,20 +23,22 @@ class QuizQuestion extends Component {
     this.state = {
       incorrectAnswer: false,
       score:0,
-      rightTheFirstTime: true,
-      clickCorrect: "no"
+      finalScore: 0,
+      rightTheFirstTime: true
     };
+    this.handleQuizEndScore = this.handleQuizEndScore.bind(this);
   }
-  
+
+  handleQuizEndScore(finalScore){
+      this.setState({finalScore, score})
+  }
 
   render() {
     return (
-      <>
-         <div className="head">
+        <>
+      <header>
           <h3>Know the Lingo</h3>
-      </div>
-     
-      <>
+      </header>
       <main className="app">
         {" "}
         {this.state.incorrectAnswer ? (
@@ -65,41 +66,28 @@ class QuizQuestion extends Component {
         <section>
         <QuizScore parentState = {this.state} />
         </section>
-      </main>
-      <section>
-      {this.props.quiz_question.id === quizData.quiz_questions.length && this.state.clickCorrect === "yes"
-       ? (
+       
+     {/* <section>
         <QuizEnd finalScore = {this.state} />
-      ) : null
-
-  }
-     </section> </>
-      
+     </section> */}
+      </main>
       </>
-              )}
+      )}
    ;
   
   handleClick(buttonText) {
-   
-   
     if (buttonText == this.props.quiz_question.answer) {
-      this.setState({ incorrectAnswer: false })
+      this.setState({ incorrectAnswer: false });
       if(this.state.rightTheFirstTime){
          this.setState({score : this.state.score + 1}) 
-         this.setState({clickCorrect: "yes"})
       }
-      this.setState({clickCorrect: "yes"})
       this.setState({rightTheFirstTime: true});
       this.props.showNextQuestionHandler();
     } else {
       this.setState({rightTheFirstTime: false});
       this.setState({ incorrectAnswer: true });
     }
-    if(this.props.quiz_question.id == quizData.quiz_questions.length -1){
-      this.setState({clickCorrect: "no"})
-    }
   }
-  
 }
 
 export default QuizQuestion;

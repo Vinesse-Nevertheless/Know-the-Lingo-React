@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
 import Quiz from "./Quiz.js";
+import QuizEnd from "./QuizEnd";
 
-class App extends Component {
-  render() {
-    return <Quiz />;
-  }
+export default function App() {
+  
+  
+    return (<Quiz />);
+ 
 }
 
-export default App;
+
