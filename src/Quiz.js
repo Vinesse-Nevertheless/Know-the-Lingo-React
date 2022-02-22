@@ -7,6 +7,12 @@ import QuizEnd from "./QuizEnd.js";
 //Get quiz question number, question text, answer options and correct answer from json file
 let quizData = require("./quiz_data.json");
 
+/*
+This component progress through the json question file and the array with all 
+the questions and answers.
+
+Once the array is complete the QuizEnd component is displayed.
+*/
 
 class Quiz extends Component {
   constructor(props) {

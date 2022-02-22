@@ -87,7 +87,41 @@ body {
   button svg {
     margin-right: 5px;
   }
-/*Remove bullets from lists */
+
+.QuizQuestion {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  text-align: center;
+}
+.QuizEnd {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 20px;
+}
+.QuizEnd a {
+  display: block;
+  padding-top: 20px;
+}
+
 ul {
-  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;  /*Remove bullets from lists */
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+button {
+  margin: 0.6em auto;
+  font-size: 1.5em;
+  display: block;
+}
+.error {
+  color: red;
 }

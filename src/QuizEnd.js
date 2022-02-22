@@ -1,9 +1,10 @@
-
-
 import React, { Component, useState } from "react";
 
 let quizData = require("./quiz_data.json");
-
+/*
+This component shows the end screen with the final score
+and allows the player to play again if desired.
+*/
 
 class QuizEnd extends Component {
   render() {

@@ -3,19 +3,7 @@ import React, { Component, useState } from "react";
 import QuizScore from "./QuizScore.js";
 import QuizEnd from "./QuizEnd.js";
 import QuizQuestionButton from "./QuizQuestionButton.js";
-import Quiz from "./Quiz"
 
-/*
-Button Flow 2
-
-The clickHandler prop in <QuizQuestionButton/> component below is bound the handleClick(buttonText)
-The binding allows handleClick in QuizQuestionButton.js to pass an argument to clickHandler prop on this page
-and to have handleClick(buttonText) implement logic.
-
-The logic: if button clicked equals the right answer, go to the method that handles showing the next question.
-
-Go to Quiz.js for part 3.
-*/
 let quizData = require("./quiz_data.json");
 
 class QuizQuestion extends Component {
@@ -28,8 +16,16 @@ class QuizQuestion extends Component {
       clickCorrect: "no"
     };
   }
+/*
+Render Quiz format by showing component that shows questions and answers.
+QuizQuestion component shares state with QuizScore component which gives a real
+time scoring effect.
 
+If last question is reached logic is employed that hides the QuizQuestion component
+and shows the QuizEnd component that gives the final score and asks user if he/she
+would like to play the game again.
 
+*/
   render() {
     return (
       <section>
@@ -98,7 +94,6 @@ class QuizQuestion extends Component {
       this.setState({ clickCorrect: "no" })
     }
   }
-
 }
 
 export default QuizQuestion;
